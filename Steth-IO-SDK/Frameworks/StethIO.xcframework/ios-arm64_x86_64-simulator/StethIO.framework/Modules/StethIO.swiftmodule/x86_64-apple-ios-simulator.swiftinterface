@@ -1225,8 +1225,9 @@ extension StethIO.Blowfish {
   public var isRecording: Swift.Bool
   public var sampleRate: Swift.Double
   public var isPause: Swift.Bool
-  @objc deinit
+  public var isHeadphoneConnected: Swift.Bool
   @objc override dynamic public init()
+  @objc deinit
 }
 final public class AES {
   public enum Error : Swift.Error {

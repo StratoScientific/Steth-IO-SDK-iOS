@@ -1,8 +1,8 @@
 {
   "name": "Steth-IO-SDK",
-  "version": "0.1.1",
-  "summary": "A short description of Steth-IO-SDK.",
-  "description": "Think: What does it do? Why did you write it? What is the focus?",
+  "version": "0.1.2",
+  "summary": "Steth IO is an iOS-based smartphone stethoscope that is cleared by the FDA.",
+  "description": "Next Generation Telemedicine Platform Simple, flexible, scalable, remote, continuous patient care that connects to any mobile device.",
   "homepage": "https://github.com/StratoScientific/Steth-IO-SDK-iOS",
   "license": {
     "type": "MIT",
@@ -13,11 +13,10 @@
   },
   "source": {
     "git": "https://github.com/StratoScientific/Steth-IO-SDK-iOS.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "13.0"
   },
-  "source_files": "Steth-IO-SDK/Classes/**/*.swift",
   "vendored_frameworks": "Steth-IO-SDK/Frameworks/StethIO.xcframework"
 }
