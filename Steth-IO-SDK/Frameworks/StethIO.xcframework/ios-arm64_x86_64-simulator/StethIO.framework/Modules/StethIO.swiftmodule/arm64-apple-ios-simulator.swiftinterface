@@ -1718,6 +1718,9 @@ public protocol StethIOManagerDelegate : AnyObject {
     get
     set
   }
+  public var uniqueIdentifier: Swift.String {
+    get
+  }
   @objc override dynamic public init()
   public func setupGraphView(graphView: UIKit.UIView, in controller: UIKit.UIViewController)
   public func prepare() throws
