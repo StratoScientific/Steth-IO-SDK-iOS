@@ -89,7 +89,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == modePickerView {
-            self.stethManager.examType = row == 0 ? .heart : .lungs
+            self.stethManager.examType = row == 0 ? .heart : .lung
         }
         if row == 0{
             self.stethManager.sampleType = .none
