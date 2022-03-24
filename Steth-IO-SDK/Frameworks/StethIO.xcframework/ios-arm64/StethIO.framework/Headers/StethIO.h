@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GraphSnapshot.h"
 //! Project version number for StethIO.
 FOUNDATION_EXPORT double StethIOVersionNumber;
 

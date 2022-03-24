@@ -1688,7 +1688,7 @@ public protocol StethIOManagerDelegate : AnyObject {
 @objc @_inheritsConvenienceInitializers public class StethIOManager : ObjectiveC.NSObject {
   public enum ExamType : Swift.String {
     case heart
-    case lungs
+    case lung
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1715,6 +1715,18 @@ public protocol StethIOManagerDelegate : AnyObject {
   public var graphView: StethIO.GraphViewController?
   weak public var delegate: StethIO.StethIOManagerDelegate?
   public var apiKey: Swift.String {
+    get
+    set
+  }
+  public var heartMinimumGain: Swift.Double {
+    get
+    set
+  }
+  public var lungTargetLevel: Swift.Double {
+    get
+    set
+  }
+  public var heartTargetLevel: Swift.Double {
     get
     set
   }
