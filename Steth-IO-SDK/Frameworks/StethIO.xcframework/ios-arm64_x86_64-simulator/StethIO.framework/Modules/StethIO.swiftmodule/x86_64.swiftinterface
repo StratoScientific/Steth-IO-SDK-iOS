@@ -1688,7 +1688,7 @@ public protocol StethIOManagerDelegate : AnyObject {
 @objc @_inheritsConvenienceInitializers public class StethIOManager : ObjectiveC.NSObject {
   public enum ExamType : Swift.String {
     case heart
-    case lung
+    case lungs
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
