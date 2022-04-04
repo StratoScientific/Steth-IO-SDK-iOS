@@ -1744,6 +1744,7 @@ public protocol StethIOManagerDelegate : AnyObject {
   public func numStethSamplesRecorded() -> Swift.Int32
   public func recordedStethAudioSamples() -> Swift.UnsafeMutablePointer<Swift.Float>
   public func clearRecordedStethAudio()
+  public func generateGraphSnapshot(size: CoreGraphics.CGSize, startTime: Swift.Double, endTime: Swift.Double, examType: StethIO.StethIOManager.ExamType) -> UIKit.UIImage
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class GraphViewController : GLKit.GLKViewController {
