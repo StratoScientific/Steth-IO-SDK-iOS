@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
     @IBAction func stopAction() {
         //To generate the image for the exam, uncomment the below function. Click quick help for the function to see more details.
-        //let graphImage = stethManager.generateGraphSnapshot(size: CGSize.init(width: 1024, height: 512), startTime: 0, endTime: 10, examType: stethManager.examType)
+        let graphImage = stethManager.generateGraphSnapshot(size: CGSize.init(width: 1024, height: 512), startTime: 0, endTime: 10, examType: stethManager.examType)
         
         //This will start the recording
         stethManager.stopRecording()
