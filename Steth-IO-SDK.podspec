@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Steth-IO-SDK'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'Steth IO is an iOS-based smartphone stethoscope that is cleared by the FDA.'
 
 # This description is used to generate tags and improve search results.
