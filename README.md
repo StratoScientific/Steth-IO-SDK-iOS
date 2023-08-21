@@ -28,7 +28,7 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
 1. In ViewController
     ```swift
     //Initializer
-    let stethManager = StethIOManager.init()
+    let stethManager = StethIOManager.shared
     
     //Enter your API key here
     stethManager.apiKey = "YOUR_API_KEY"
@@ -37,28 +37,70 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     stethManager.delegate = self
     
     //set the filter mode to heart/lung
-    stethManager.examType = .heart //for heart
-    stethManager.examType = .lung //for lungs
+    stethManager.examType = .heart // heart/lungs
     
     //set the sample type to none/processedSamples/rawSamples
     stethManager.sampleType = .none
-    
-    //Pass 'UIView' instance to graphview parameter. This view will render the graph visualisation
-    stethManager.setupGraphView(graphView: graphView, in: self)
-    
-    //Enter your API key here
-    try stethManager.apiKey.apiKey(apiKey: "YOUR_API_KEY")
+
+    production or stagging
+    manager.environment = .stagging
+
     
     //here we need to process the biquad files and apply filter
     try stethManager.prepare()
     
     //This will start the recording
-    try self.stethManager.startRecording()
+    try self.stethManager.start()
     
     //This will stop the recording
-    try self.stethManager.stopRecording()
+    try self.stethManager.finish()
+    
+    cancel session
+    try self.stethManager.cancel()
     ```
     
+###StethIODelegate
+
+```
+    ///MARK:- StethIO Delegate
+    func stethIOManagerReadyToStart() {
+        SDK read to start the exam. your api key is valid
+    }
+    
+    func stethIOManagerDidStarted() {
+        // exam started
+    }
+    
+    func stethIOManagerDidCancelled() {
+      // exam cancelled by user
+    }
+    func stethIOManagerDidUpdateDuration(_ seconds: TimeInterval) {
+       // while taking the exam exation duration will be update
+    }
+    func stethIOManagerDidFinished(url: URL?) {
+     // after finish the example, return the audio sample local file path
+    }
+    func stethIOManagerDidUpdateHeartBPM(_ bpm: Double) {
+        // it will be trigger only type heart
+    }
+    
+```   
+
+
+###StethIODelegate 
+SpectrumGLKViewController is help to display the Spectrum graph in view-controller mode
+SpectrumGLKView is help to display the Spectrum graph in view mode
+
+present programatically  or embbed with storyboard
+
+```
+        let vc = SpectrumGLKViewController()
+        present(vc, animated: true)
+        
+        let view = SpectrumGLKView(frame: <#>)
+        container.addSubView(view);
+
+```
 ## Important ⚠️
 The `API_KEY` in the example application will only work for the example application. Using the same key in another application will not work.
 
