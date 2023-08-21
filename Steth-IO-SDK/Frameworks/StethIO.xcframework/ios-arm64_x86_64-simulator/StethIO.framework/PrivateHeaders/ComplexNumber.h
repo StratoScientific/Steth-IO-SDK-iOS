@@ -56,6 +56,7 @@
 
 #include <math.h>
 #include <stdio.h>
+#include "../Logs.h"
 
 class Complex
 {
@@ -107,8 +108,8 @@ public:
 	Complex			inline operator -= (const Complex &a);
 
 
-	void			Print() {printf("(%f,%f)", mReal, mImag ); };
-	void			PrintMagnitudePhase() {printf("(%f,%f)\n", GetMagnitude(), GetPhase() ); };
+	void			Print() {pprintf("(%f,%f)", mReal, mImag ); };
+	void			PrintMagnitudePhase() {pprintf("(%f,%f)\n", GetMagnitude(), GetPhase() ); };
 	
 	
 	double			mReal;

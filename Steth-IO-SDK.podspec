@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/StratoScientific/Steth-IO-SDK-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dhinesh-raju' => 'dhinesh.raju@ionixxtech.com' }
+  s.author           = { 'StratoScientific' => 'stethio@ionixxtech.com' }
   s.source           = { :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
