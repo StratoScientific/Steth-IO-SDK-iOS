@@ -1,0 +1,146 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StethIO
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import Accelerate
+import AudioUnit
+import CommonCrypto
+import CryptoSwift
+import Foundation
+import GLKit
+import Network
+import OpenGLES
+@_exported import StethIO
+import StethIOPrivate
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+extension AVFAudio.AVAudioSession {
+  public static func setInputToBuiltInMicAndNoiseCancel(audioSessionPort: AVFAudio.AVAudioSession.Port = AVAudioSession.Port.builtInMic) throws
+}
+public enum Environment {
+  case stagging, production
+  public static func == (a: StethIO.Environment, b: StethIO.Environment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Foundation.Data {
+  public var toString: Swift.String? {
+    get
+  }
+  public var toBase64String: Swift.String? {
+    get
+  }
+  public func json() throws -> Any?
+}
+public enum APIKeyErrors : Swift.Error {
+  case payloadDecryptError
+  case payloadJSONError(any Swift.Error)
+  case apiError(any Swift.Error)
+  case apiResponseDecryptError
+  case responseDataParseError(any Swift.Error)
+}
+public enum SDKSetup : Swift.Error {
+  case errorLoadingModel
+  public static func == (a: StethIO.SDKSetup, b: StethIO.SDKSetup) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol StethIOManagerDelegate : AnyObject {
+  func stethIOManagerReadyToStart()
+  func stethIOManagerDidStarted()
+  func stethIOManagerDidUpdateHeartBPM(_ bpm: Swift.Double)
+  func stethIOManagerDidUpdateDuration(_ seconds: Foundation.TimeInterval)
+  func stethIOManagerDidCancelled()
+  func stethIOManagerDidFinished(url: Foundation.URL?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StethIOManager : ObjectiveC.NSObject, AVFAudio.AVAudioPlayerDelegate, AVFAudio.AVAudioRecorderDelegate {
+  public enum ExamType : Swift.String {
+    case heart
+    case lungs
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AudioSampleOutputType {
+    case rawSamples
+    case processedSamples
+    case none
+    public static func == (a: StethIO.StethIOManager.AudioSampleOutputType, b: StethIO.StethIOManager.AudioSampleOutputType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var examType: StethIO.StethIOManager.ExamType {
+    get
+    set
+  }
+  public var sampleType: StethIO.StethIOManager.AudioSampleOutputType
+  public static var shared: StethIO.StethIOManager
+  weak public var delegate: (any StethIO.StethIOManagerDelegate)?
+  public var apiKey: Swift.String {
+    get
+    set
+  }
+  public var environment: StethIO.Environment
+  public var hasReady: Swift.Bool {
+    get
+  }
+  public var audioSessionPort: AVFAudio.AVAudioSession.Port
+  public func start() throws
+  public func cancel()
+  public func finish(clear: Swift.Bool = false)
+  @objc deinit
+}
+extension StethIO.StethIOManager {
+  public var debug: Swift.Bool {
+    get
+    set
+  }
+  public var isRecording: Swift.Bool {
+    get
+  }
+  public var isPause: Swift.Bool {
+    get
+    set
+  }
+  public var isHeadphonesConnected: Swift.Bool {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) open class SpectrumGLKViewController : GLKit.GLKViewController {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func loadView()
+  @objc deinit
+}
+public struct SpectrumWindowWidthSeconds {
+  public init(hearts: Swift.Double, lungs: Swift.Double)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class SpectrumGLKView : GLKit.GLKView {
+  @_Concurrency.MainActor(unsafe) public var verticleZoom: Swift.Float
+  @_Concurrency.MainActor(unsafe) public var spectrumWindowWidthSeconds: StethIO.SpectrumWindowWidthSeconds
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension StethIO.Environment : Swift.Equatable {}
+extension StethIO.Environment : Swift.Hashable {}
+extension StethIO.SDKSetup : Swift.Equatable {}
+extension StethIO.SDKSetup : Swift.Hashable {}
+extension StethIO.StethIOManager.ExamType : Swift.Equatable {}
+extension StethIO.StethIOManager.ExamType : Swift.Hashable {}
+extension StethIO.StethIOManager.ExamType : Swift.RawRepresentable {}
+extension StethIO.StethIOManager.AudioSampleOutputType : Swift.Equatable {}
+extension StethIO.StethIOManager.AudioSampleOutputType : Swift.Hashable {}

@@ -4,73 +4,61 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/CryptoSwift.framework/CryptoSwift</key>
-		<data>
-		1DjmR8//KRSxL07DapaxjiaEO+Q=
-		</data>
-		<key>Frameworks/CryptoSwift.framework/Info.plist</key>
-		<data>
-		vyMtltvxJJrhgKekzSF8+l8vjoU=
-		</data>
-		<key>Frameworks/CryptoSwift.framework/_CodeSignature/CodeResources</key>
-		<data>
-		+vLyThjsAvurfD3vL0f4jC86WS0=
-		</data>
 		<key>Headers/StethIO.h</key>
 		<data>
 		vwXln3UbHLwYf16aWz7xB/tdHAw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NKCSeX8+N6jCCkBKvMXRqo6p81c=
+		eER/kTaXOi1aQutkVM1cRYIPANA=
 		</data>
 		<key>Modules/StethIO.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		ASyK1dLab9JjNtIowsZSz7nSr/Y=
+		orx0ls+n8C5hOI53IRZi6EBIHIU=
 		</data>
 		<key>Modules/StethIO.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		MkddmbwVND67i1HF5h4L9tzYyKU=
+		YipihbCO5ZWW6LUaQcslhE4dtYo=
 		</data>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		x1GQZ3hF1KrIagl3ogEMBoqt61o=
+		01xgffbotci8QSae8eUtGo+OzP4=
 		</data>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		VEIaSbNo9x+Fg6TWzAgUciH1xtY=
+		NH8qKN1Wp7dTXmHJNwemq/42rHY=
 		</data>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		B5h9LcSuh1G0PmZ5nzSrr50PatY=
+		uHOM6k5kBqBz0oxpjNSIET8TZjM=
 		</data>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		VEIaSbNo9x+Fg6TWzAgUciH1xtY=
+		NH8qKN1Wp7dTXmHJNwemq/42rHY=
 		</data>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Toqt/WkFdtT4FDw4jpa5pr6sitU=
+		lgSVyw3QCeyNT+mA4O1+1th1tWw=
 		</data>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		x1GQZ3hF1KrIagl3ogEMBoqt61o=
+		01xgffbotci8QSae8eUtGo+OzP4=
 		</data>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dgjc04jHVTNQrL+6bZYq8LBrCiQ=
+		jGMBej7WPN8dQt7KJdgID21uxbI=
 		</data>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		P73K0LhWjXWuDwj3Sk3CljHdgE8=
+		dnpnWL909GdV5fgdWTEtZe9UVqQ=
 		</data>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dgjc04jHVTNQrL+6bZYq8LBrCiQ=
+		jGMBej7WPN8dQt7KJdgID21uxbI=
 		</data>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bjfGgbvKxv+RRChatHhkR5lixS0=
+		5ZZ8my/Ew1ZJyKDZVm1NSKC7K8Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,27 +78,15 @@
 		</data>
 		<key>PrivateHeaders/ComplexNumber.h</key>
 		<data>
-		PGHJHRHQ6Bs+LsbszRWp7rLKYEQ=
+		LZXBiRkOiTqNh22QlrQQMPQf/9I=
 		</data>
 		<key>PrivateHeaders/FFT.h</key>
 		<data>
 		dnxOTgOCNelh5F4wYbsVX9lBX94=
 		</data>
-		<key>PrivateHeaders/StethAudioFilters.h</key>
-		<data>
-		SChUTH98hEb4PGTkqrY8QKEtGXw=
-		</data>
-		<key>PrivateHeaders/StethHeartRate.h</key>
-		<data>
-		AaDNvC4lLt0+qp1ZHK8sEPSRGTE=
-		</data>
 		<key>PrivateHeaders/_kiss_fft_guts.h</key>
 		<data>
 		q1CK4iWp2nJ1x6jTmBH4fUpKeOk=
-		</data>
-		<key>PrivateHeaders/audioQualityTests.h</key>
-		<data>
-		HAcIaD5rn2g1eAj3M6e5xRCzJcI=
 		</data>
 		<key>PrivateHeaders/biquad.h</key>
 		<data>
@@ -135,27 +111,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/CryptoSwift.framework/CryptoSwift</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			5jqXz5CMAi0qsDq84+w3DTA5pjbIqKDPCe4kzlbFs7I=
-			</data>
-		</dict>
-		<key>Frameworks/CryptoSwift.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GoUGUK6+LQo+UKlcqTai4j1nExQ+tJKAIx7/tECiFjo=
-			</data>
-		</dict>
-		<key>Frameworks/CryptoSwift.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CFyUtnSB6NQ0xTncVJm2BS65hJnwJwJsLU2zm8Y3soY=
-			</data>
-		</dict>
 		<key>Headers/StethIO.h</key>
 		<dict>
 			<key>hash2</key>
@@ -167,84 +122,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fiU3n29xQzpwLnl5Xlom49tmj/ESse59doBKeoAuo0o=
+			aaJFXJSubqlA//U99PUaQRWcw6tK9UpsgPsK268Dtx4=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OkLSt5oAWsVt4veVSrSCbRQGhXWS8bxbkspk/iLGgEw=
+			W6RdRci8gZXgcoQ3kvzJ4lqhb1M7QUe0kMcsBfX0oPI=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TazBkPBQ5Z75aSqy3hUbleAldtN8Y2FSgPJELC/Urj0=
+			iMQMTUE4wKTtlsnynZ5ftDXp6Mxp/3EklsYDNYdlTm0=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eiYp5CmLUQXT36DVwsb/1YhOKur/JZ09CLdVEdpElqY=
+			1JWDMAJh/RO1hDkstHMOLIiyc+8WHO2mxuphDjgr2qs=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SPe1FBQhBmifDMwEgWXbf1qZ9NjZl89NGyf6lpTt9qc=
+			b1/Q0f60Vd+9VT1/NSkb+JczkiTPSR/Rz+VNOG4IfGI=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eiYp5CmLUQXT36DVwsb/1YhOKur/JZ09CLdVEdpElqY=
+			1JWDMAJh/RO1hDkstHMOLIiyc+8WHO2mxuphDjgr2qs=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gkYX0lkbGTxNo3RxLfpHYtUlP7X6wYaI7gWCDRI8MSY=
+			tyI8dRXSUuP9DC0AnfkhkMp1d/YWbIK0D++I4leg9CE=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TazBkPBQ5Z75aSqy3hUbleAldtN8Y2FSgPJELC/Urj0=
+			iMQMTUE4wKTtlsnynZ5ftDXp6Mxp/3EklsYDNYdlTm0=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D1uVNKyrarkqADUkVIv+qs96VBmXGHsYI8qerWiSV7M=
+			Ebu4avrc5yrRyGerbZ9QTn2uKAKRDhxXBC3GINK3qwU=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A//CNUj79CC1n6RqI8oKoOuJGtRxtBayEzzPDDZNlUA=
+			CoGiV1aVjong+Y2Q+cgsuZ9/3WXVdKtxEwIAOgkc73U=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D1uVNKyrarkqADUkVIv+qs96VBmXGHsYI8qerWiSV7M=
+			Ebu4avrc5yrRyGerbZ9QTn2uKAKRDhxXBC3GINK3qwU=
 			</data>
 		</dict>
 		<key>Modules/StethIO.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LXTOJDOfR+VUT/KylbO9YRcDXypP8/h5GKOsxQtOqhE=
+			DNhbUg2LmhI4aspXlcqO/0RrGZXvjw9Vit+1oGwFTbM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -279,7 +234,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5TGC0q1ut966sX67EaNlCz3qF981d4uKzQpvF2/Bzo=
+			N2AaHRWpUNSEJ315yf51a4sHOExRcGFiGMJxkhAgUQE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/FFT.h</key>
@@ -289,32 +244,11 @@
 			OCsmwSaQIRhNRNtHpZAfpiZhbckq5JtTkhPu/62fpto=
 			</data>
 		</dict>
-		<key>PrivateHeaders/StethAudioFilters.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1Gx1RtVO4HqP9VgI4acQEi6Inm3o5568KQWspm2Q5Zc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/StethHeartRate.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1eQEyxO8XrPREqf0wyZSJ/sd03629I+42z84ucpLo68=
-			</data>
-		</dict>
 		<key>PrivateHeaders/_kiss_fft_guts.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			x/HwZKnYbEpIiU8jfWdRqkboCJyyjUZgi/nLeWWBLXE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/audioQualityTests.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RW5BXTLMh6Zl5Nn7tqFj0/U3q/9D2PfNgCHp2NCE0tg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/biquad.h</key>

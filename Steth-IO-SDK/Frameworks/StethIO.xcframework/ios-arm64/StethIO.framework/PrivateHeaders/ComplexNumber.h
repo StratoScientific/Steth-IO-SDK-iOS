@@ -56,7 +56,6 @@
 
 #include <math.h>
 #include <stdio.h>
-#include "../Logs.h"
 
 class Complex
 {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Steth-IO-SDK'
-  s.version          = '0.1.9'
+  s.version          = '1.0.0'
   s.summary          = 'Steth IO is an iOS-based smartphone stethoscope that is cleared by the FDA.'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,6 @@ Pod::Spec.new do |s|
   
  
   s.vendored_frameworks = 'Steth-IO-SDK/Frameworks/StethIO.xcframework'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#   s.dependency 'CryptoSwift', '~> 1.2.0'
   
 end

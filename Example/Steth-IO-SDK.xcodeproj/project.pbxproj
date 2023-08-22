@@ -191,7 +191,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = A4MNRTY4EV;
+						DevelopmentTeam = 3C7UZJWDBM;
 						LastSwiftMigration = 1150;
 					};
 				};
@@ -396,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = A4MNRTY4EV;
+				DEVELOPMENT_TEAM = 3C7UZJWDBM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Steth-IO-SDK\"",
@@ -422,7 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = A4MNRTY4EV;
+				DEVELOPMENT_TEAM = 3C7UZJWDBM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Steth-IO-SDK\"",
