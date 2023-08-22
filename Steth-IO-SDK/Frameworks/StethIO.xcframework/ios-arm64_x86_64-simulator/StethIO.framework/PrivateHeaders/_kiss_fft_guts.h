@@ -18,6 +18,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    typedef struct { kiss_fft_scalar r; kiss_fft_scalar i; }kiss_fft_cpx; */
 #include "kiss_fft.h"
 #include <limits.h>
+#include "../Logs.h"
 
 #define MAXFACTORS 32
 /* e.g. an fft of length 128 has 4 factors 
@@ -57,7 +58,7 @@ struct kiss_fft_state{
 #if defined(CHECK_OVERFLOW)
 #  define CHECK_OVERFLOW_OP(a,op,b)  \
 	if ( (SAMPPROD)(a) op (SAMPPROD)(b) > SAMP_MAX || (SAMPPROD)(a) op (SAMPPROD)(b) < SAMP_MIN ) { \
-		fprintf(stderr,"WARNING:overflow @ " __FILE__ "(%d): (%d " #op" %d) = %ld\n",__LINE__,(a),(b),(SAMPPROD)(a) op (SAMPPROD)(b) );  }
+		pprintf(stderr,"WARNING:overflow @ " __FILE__ "(%d): (%d " #op" %d) = %ld\n",__LINE__,(a),(b),(SAMPPROD)(a) op (SAMPPROD)(b) );  }
 #endif
 
 
@@ -147,4 +148,4 @@ struct kiss_fft_state{
 
 /* a debugging function */
 #define pcpx(c)\
-    fprintf(stderr,"%g + %gi\n",(double)((c)->r),(double)((c)->i) )
+    pprintf(stderr,"%g + %gi\n",(double)((c)->r),(double)((c)->i) )

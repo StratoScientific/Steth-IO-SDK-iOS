@@ -107,8 +107,8 @@ public:
 	Complex			inline operator -= (const Complex &a);
 
 
-	void			Print() {printf("(%f,%f)", mReal, mImag ); };
-	void			PrintMagnitudePhase() {printf("(%f,%f)\n", GetMagnitude(), GetPhase() ); };
+	void			Print() {pprintf("(%f,%f)", mReal, mImag ); };
+	void			PrintMagnitudePhase() {pprintf("(%f,%f)\n", GetMagnitude(), GetPhase() ); };
 	
 	
 	double			mReal;

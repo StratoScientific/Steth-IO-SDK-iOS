@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Steth-IO-SDK'
-  s.version          = '0.1.8'
+  s.version          = '1.0.1'
   s.summary          = 'Steth IO is an iOS-based smartphone stethoscope that is cleared by the FDA.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/StratoScientific/Steth-IO-SDK-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dhinesh-raju' => 'dhinesh.raju@ionixxtech.com' }
+  s.author           = { 'StratoScientific' => 'alexappadurai.swamydhas@ionixxtech.com' }
   s.source           = { :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -39,6 +39,6 @@ Pod::Spec.new do |s|
   
  
   s.vendored_frameworks = 'Steth-IO-SDK/Frameworks/StethIO.xcframework'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#   s.dependency 'CryptoSwift', '~> 1.2.0'
   
 end
