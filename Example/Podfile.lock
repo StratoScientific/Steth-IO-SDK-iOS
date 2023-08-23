@@ -1,5 +1,5 @@
 PODS:
-  - Steth-IO-SDK (0.1.9)
+  - Steth-IO-SDK (1.0.1)
 
 DEPENDENCIES:
   - Steth-IO-SDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Steth-IO-SDK: 1d068d234678325a57122b7dac6f02e6b0ccd8e1
+  Steth-IO-SDK: 0694d7476477ef692a49937ede0a8d3eb4fbaacd
 
 PODFILE CHECKSUM: 271c92ed3ceb8535e0b3937b65f9aa241a6681d0
 
