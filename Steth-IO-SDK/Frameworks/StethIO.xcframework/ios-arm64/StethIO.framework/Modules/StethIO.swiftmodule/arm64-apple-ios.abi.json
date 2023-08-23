@@ -29006,7 +29006,10 @@
         "name": "StethIO_Private",
         "printedName": "StethIO_Private",
         "declKind": "Import",
-        "moduleName": "StethIO"
+        "moduleName": "StethIO",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -60353,721 +60356,721 @@
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 377,
+      "offset": 402,
       "length": 5,
       "value": "44000"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 435,
+      "offset": 460,
       "length": 27,
       "value": "\"com.stratoscientific.exam\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 598,
+      "offset": 623,
       "length": 26,
       "value": "\"before new Instance====>\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 661,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 989,
+      "offset": 1014,
       "length": 25,
       "value": "\"after new Instance====>\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1051,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1277,
+      "offset": 1302,
       "length": 21,
       "value": "\"com.stethio.digital\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1453,
+      "offset": 1478,
       "length": 8,
       "value": "\"biquad\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1464,
+      "offset": 1489,
       "length": 6,
       "value": "\"puck\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1480,
+      "offset": 1505,
       "length": 9,
       "value": "\"stethio\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 1694,
+      "offset": 1719,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 2364,
+      "offset": 2389,
       "length": 7,
       "value": "\"parse\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2379,
+      "offset": 2404,
       "length": 4,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 2423,
+      "offset": 2448,
       "length": 39,
       "value": "\"Unable to find the local biquad files\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2566,
+      "offset": 2591,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2593,
+      "offset": 2618,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2620,
+      "offset": 2645,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2647,
+      "offset": 2672,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2674,
+      "offset": 2699,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2783,
+      "offset": 2808,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2813,
+      "offset": 2838,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2843,
+      "offset": 2868,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2873,
+      "offset": 2898,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2903,
+      "offset": 2928,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2983,
+      "offset": 3008,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3019,
+      "offset": 3044,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3031,
+      "offset": 3056,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3062,
+      "offset": 3087,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 3142,
+      "offset": 3167,
       "length": 6,
       "value": "\"peak\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3223,
+      "offset": 3248,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3292,
+      "offset": 3317,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3316,
+      "offset": 3341,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3399,
+      "offset": 3424,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3430,
+      "offset": 3455,
       "length": 5,
       "value": "0.001"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3466,
+      "offset": 3491,
       "length": 5,
       "value": "0.001"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3628,
+      "offset": 3653,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3771,
+      "offset": 3796,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 3815,
+      "offset": 3840,
       "length": 10,
       "value": "\"lowpass2\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3900,
+      "offset": 3925,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 3970,
+      "offset": 3995,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4079,
+      "offset": 4104,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4106,
+      "offset": 4131,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4133,
+      "offset": 4158,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4160,
+      "offset": 4185,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4187,
+      "offset": 4212,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4218,
+      "offset": 4243,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 4262,
+      "offset": 4287,
       "length": 11,
       "value": "\"highpass2\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 4348,
+      "offset": 4373,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 4417,
+      "offset": 4442,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4526,
+      "offset": 4551,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4553,
+      "offset": 4578,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4580,
+      "offset": 4605,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4607,
+      "offset": 4632,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4634,
+      "offset": 4659,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4665,
+      "offset": 4690,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 4709,
+      "offset": 4734,
       "length": 15,
       "value": "\"Butterworth4a\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 4799,
+      "offset": 4824,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4880,
+      "offset": 4905,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4915,
+      "offset": 4940,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4942,
+      "offset": 4967,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4969,
+      "offset": 4994,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4996,
+      "offset": 5021,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5023,
+      "offset": 5048,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5054,
+      "offset": 5079,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 5098,
+      "offset": 5123,
       "length": 15,
       "value": "\"Butterworth4b\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 5188,
+      "offset": 5213,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5269,
+      "offset": 5294,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5304,
+      "offset": 5329,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5331,
+      "offset": 5356,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5358,
+      "offset": 5383,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5385,
+      "offset": 5410,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5412,
+      "offset": 5437,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5443,
+      "offset": 5468,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 5478,
+      "offset": 5503,
       "length": 11,
       "value": "\"bandpass2\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 5564,
+      "offset": 5589,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 5633,
+      "offset": 5658,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5742,
+      "offset": 5767,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5769,
+      "offset": 5794,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5796,
+      "offset": 5821,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5823,
+      "offset": 5848,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5850,
+      "offset": 5875,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5881,
+      "offset": 5906,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 5925,
+      "offset": 5950,
       "length": 5,
       "value": "\"raw\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 5969,
+      "offset": 5994,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6008,
+      "offset": 6033,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6047,
+      "offset": 6072,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6086,
+      "offset": 6111,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6125,
+      "offset": 6150,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6157,
+      "offset": 6182,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6309,
+      "offset": 6334,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6351,
+      "offset": 6376,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6393,
+      "offset": 6418,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6435,
+      "offset": 6460,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6477,
+      "offset": 6502,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6528,
+      "offset": 6553,
       "length": 4,
       "value": "1e-7"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6555,
+      "offset": 6580,
       "length": 4,
       "value": "1e-7"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6582,
+      "offset": 6607,
       "length": 4,
       "value": "1e-7"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6609,
+      "offset": 6634,
       "length": 4,
       "value": "1e-7"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "FloatLiteral",
-      "offset": 6636,
+      "offset": 6661,
       "length": 4,
       "value": "1e-7"
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 6675,
+      "offset": 6700,
       "length": 39,
       "value": "\"Error designing \""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 6706,
+      "offset": 6731,
       "length": 6,
       "value": "\" filter\""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 6956,
+      "offset": 6981,
       "length": 40,
       "value": "\"Failed to decode \""
     },
     {
       "filePath": "\/Users\/alex\/Documents\/GitHub\/Steth-IO-SDK-iOS-Framework\/StethIO\/Manager\/GraphViewManager.swift",
       "kind": "StringLiteral",
-      "offset": 6988,
+      "offset": 7013,
       "length": 6,
       "value": "\" filter\""
     },
