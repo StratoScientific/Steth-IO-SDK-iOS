@@ -42,24 +42,20 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     //set the sample type to none/processedSamples/rawSamples
     stethManager.sampleType = .none
 
-    production or stagging
-    manager.environment = .stagging
-
-    
-    //here we need to process the biquad files and apply filter
-    try stethManager.prepare()
+    // production or stagging
+    stethManager.environment = .production
     
     //This will start the recording
-    try self.stethManager.start()
+    try stethManager.start()
     
     //This will stop the recording
-    try self.stethManager.finish()
+    stethManager.finish()
     
-    cancel session
-    try self.stethManager.cancel()
+    // cancel session
+    stethManager.cancel()
     ```
     
-### StethIODelegate
+### StethIOManagerDelegate
 
 ```
     ///MARK:- StethIO Delegate
@@ -87,7 +83,7 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
 ```   
 
 
-### StethIODelegate 
+### SpectrumGLKView 
 SpectrumGLKViewController is help to display the Spectrum graph in view-controller mode
 SpectrumGLKView is help to display the Spectrum graph in view mode
 
@@ -101,6 +97,29 @@ present programatically  or embbed with storyboard
         container.addSubView(view);
 
 ```
+
+
+
+
+|Param |   Type    | Required   | Description  | 
+|:--- | :---:| :---:| :--- | ---|
+|delegate| `StethIOManagerDelegate`|✅|callback events|
+|apiKey| String|✅|requied valid api key|
+|examType| `ExamType` |✅|ExamType  `heart`,`lungs`, `vascular`|
+|sampleType| `AudioSampleOutputType` |✅|SampleType `NONE`, `RAW_AUDIO`, `PROCESSED_AUDIO`|
+|isReady| Boolean | | SDK is ready for exam|
+|isPause| Boolean | | recording of pause status `Boolean`|
+|isRecording| Boolean | | recording is active or not `Boolean`|
+|environment| Environment | | default `production`, change the environment `STAGING` or `PRODUCTION`|
+|isHeadphonesConnected| Boolean | | Headphones is Connected or not  `Boolean`|
+|debug| Boolean ||default value is `false`|
+|start| Function |✅|start the exam, when API key are valid and audio permission|
+|pause| Function | | pause  recording, if recording is running|
+|resume| Function | | resume  recording, if recording is pause|
+|cancel| Function | | cancel  recording, if recording is running|
+|finish| Function | | finish  recording, if recording is running|
+
+
 ## Important ⚠️
 The `API_KEY` in the example application will only work for the example application. Using the same key in another application will not work.
 
