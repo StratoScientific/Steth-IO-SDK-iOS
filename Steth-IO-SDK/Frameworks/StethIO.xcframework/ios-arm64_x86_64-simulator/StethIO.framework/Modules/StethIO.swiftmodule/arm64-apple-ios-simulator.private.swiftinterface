@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StethIO
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import Accelerate
 import AudioUnit
+import AuthenticationServices
 import CommonCrypto
 import Darwin
 import Foundation
@@ -1470,12 +1471,13 @@ extension StethIO.RSA {
 public enum APIKeyErrors : Swift.Error {
   case payloadDecryptError
   case payloadJSONError(any Swift.Error)
+  case internetNotAvailable
   case apiError(any Swift.Error)
   case apiResponseDecryptError
   case responseDataParseError(any Swift.Error)
 }
 public enum SDKSetup : Swift.Error {
-  case errorLoadingModel
+  case errorAudioFilterModel
   public static func == (a: StethIO.SDKSetup, b: StethIO.SDKSetup) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -2046,6 +2048,7 @@ public protocol StethIOManagerDelegate : AnyObject {
   public enum ExamType : Swift.String {
     case heart
     case lungs
+    case vascular
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2074,7 +2077,7 @@ public protocol StethIOManagerDelegate : AnyObject {
     set
   }
   public var environment: StethIO.Environment
-  public var hasReady: Swift.Bool {
+  public var isReady: Swift.Bool {
     get
   }
   public var audioSessionPort: AVFAudio.AVAudioSession.Port
