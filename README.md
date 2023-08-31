@@ -102,7 +102,7 @@ present programatically  or embbed with storyboard
 
 
 |Param |   Type    | Required   | Description  | 
-|:--- | :---:| :---:| :--- | ---|
+|:--- | :---:| :---:| :--- |
 |delegate| `StethIOManagerDelegate`|✅|callback events|
 |apiKey| String|✅|requied valid api key|
 |examType| `ExamType` |✅|ExamType  `heart`,`lungs`, `vascular`|
