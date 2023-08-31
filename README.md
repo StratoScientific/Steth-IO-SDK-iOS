@@ -59,7 +59,7 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     try self.stethManager.cancel()
     ```
     
-###StethIODelegate
+### StethIODelegate
 
 ```
     ///MARK:- StethIO Delegate
@@ -87,7 +87,7 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
 ```   
 
 
-###StethIODelegate 
+### StethIODelegate 
 SpectrumGLKViewController is help to display the Spectrum graph in view-controller mode
 SpectrumGLKView is help to display the Spectrum graph in view mode
 
