@@ -10,7 +10,7 @@ import UIKit
 import StethIO
 import AVFoundation
 
-let API_KEY = "aOHHz2FoX03+2T3ziP9X9YEFZAxKnlAJ6qx4ybl614vLjgjFOOfNZt1ShuCTIKsC";
+let API_KEY = "+b8i2KirhtItVb//IvrzXw1d5HWZ/23CFfXhfIczPfE=";
 //let API_KEY = "+YqThBGUgSWvsCc/8np7N85NyrXHWWZbyQF3ojGHfHhbbFLLs/mSv/t75cDHOcOO";
 
 class ViewController: UIViewController, StethIOManagerDelegate {
@@ -30,7 +30,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        manager.audioSessionPort = .headphones
-//        manager.environment = .stagging
+        manager.environment = .stagging
         manager.delegate = self
         manager.apiKey = API_KEY
         manager.examType = .heart //for heart
@@ -81,7 +81,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         manager.cancel()
     }
     @IBAction func changeTypeAction(_ sender: UISegmentedControl) {
-        manager.examType = (sender.selectedSegmentIndex == 0) ? .heart : .lungs
+        manager.examType = StethIOManager.ExamType.`init`(rawValue: sender.selectedSegmentIndex)
     }
     @IBAction func debugChange(_ sender: UISwitch) {
         manager.debug = sender.isOn
@@ -128,4 +128,15 @@ class ViewController: UIViewController, StethIOManagerDelegate {
 //        print("stethIOManagerDidUpdateHeartBPM", bpm)
     }
     
+}
+
+extension StethIOManager.ExamType {
+    static func `init`(rawValue: Int)->StethIOManager.ExamType {
+        if rawValue == 0{
+            return StethIOManager.ExamType.heart
+        }else if rawValue == 1 {
+            return StethIOManager.ExamType.lungs
+        }
+        return StethIOManager.ExamType.vascular
+    }
 }

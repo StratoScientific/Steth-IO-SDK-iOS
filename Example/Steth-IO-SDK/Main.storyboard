@@ -13,18 +13,18 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Steth_IO_SDK_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hH-yr-WTg" customClass="ActionToolBar" customModule="Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hH-yr-WTg" customClass="ActionToolBar" customModule="Steth_IO_SDK_Example" customModuleProvider="target">
                                 <rect key="frame" x="12" y="732" width="390" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xor-ae-YFb">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSJ-OZ-kuY" customClass="ActionButton" customModule="Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSJ-OZ-kuY" customClass="ActionButton" customModule="Steth_IO_SDK_Example" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,7 +35,7 @@
                                                     <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPI-eJ-eLK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-Ro-2rX" customClass="ActionButton" customModule="Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-Ro-2rX" customClass="ActionButton" customModule="Steth_IO_SDK_Example" customModuleProvider="target">
                                                 <rect key="frame" x="99.5" y="0.0" width="91.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +46,7 @@
                                                     <action selector="stopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZx-MR-PMh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re8-um-JZc" customClass="ActionButton" customModule="Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re8-um-JZc" customClass="ActionButton" customModule="Steth_IO_SDK_Example" customModuleProvider="target">
                                                 <rect key="frame" x="199" y="0.0" width="91.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
                                                     <action selector="cancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1D-Td-uBf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-dj-NY5" customClass="ActionButton" customModule="Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-dj-NY5" customClass="ActionButton" customModule="Steth_IO_SDK_Example" customModuleProvider="target">
                                                 <rect key="frame" x="298.5" y="0.0" width="91.5" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,48 +91,49 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bv1-Dt-Ror">
-                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="520"/>
                                 <subviews>
-                                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-jT-eQl" customClass="SpectrumGLKView" customModule="StethIO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <glkView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-jT-eQl" customClass="SpectrumGLKView" customModule="StethIO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                                     </glkView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaC-8g-RDG">
-                                        <rect key="frame" x="0.0" y="140" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="520"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="sTs-kp-clN"/>
-                                        </constraints>
                                         <connections>
                                             <segue destination="AYP-cx-8o8" kind="embed" identifier="GraphViewController" id="Xfv-FP-h5n"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deV-UC-aev">
-                                        <rect key="frame" x="0.0" y="280" width="414" height="120"/>
+                                    <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deV-UC-aev">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <connections>
                                             <segue destination="Ozj-ov-CEF" kind="embed" id="trR-PP-iDd"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="520" id="o9F-2D-41h"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74e-HH-ihA">
-                                <rect key="frame" x="67" y="518" width="41.5" height="20.5"/>
+                                <rect key="frame" x="67" y="638" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="maU-cU-wde">
-                                <rect key="frame" x="174" y="518" width="113" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="maU-cU-wde">
+                                <rect key="frame" x="176" y="638" width="218" height="32"/>
                                 <segments>
                                     <segment title="Heart"/>
                                     <segment title="Lungs"/>
+                                    <segment title="Vascular"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeTypeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="b5A-gI-Zdu"/>
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-HN-aI1">
-                                <rect key="frame" x="27" y="566" width="307" height="31"/>
+                                <rect key="frame" x="27" y="686" width="307" height="31"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-hp-2L4">
                                         <rect key="frame" x="0.0" y="0.0" width="182" height="31"/>
@@ -169,14 +170,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hH-yr-WTg" secondAttribute="trailing" constant="12" id="4ig-HM-5R8"/>
-                            <constraint firstItem="maU-cU-wde" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="74e-HH-ihA" secondAttribute="trailing" symbolic="YES" id="4pP-bf-4ij"/>
+                            <constraint firstItem="maU-cU-wde" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="74e-HH-ihA" secondAttribute="trailing" constant="8" symbolic="YES" id="4pP-bf-4ij"/>
                             <constraint firstItem="74e-HH-ihA" firstAttribute="top" secondItem="bv1-Dt-Ror" secondAttribute="bottom" constant="30" id="92W-p9-WYW"/>
                             <constraint firstItem="bv1-Dt-Ror" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H3Z-um-4Us"/>
                             <constraint firstItem="ehw-HN-aI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="Iw9-jR-EZ7"/>
                             <constraint firstItem="74e-HH-ihA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="L29-nK-W6z"/>
                             <constraint firstItem="bv1-Dt-Ror" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Q5Z-Zh-fE1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="maU-cU-wde" secondAttribute="trailing" constant="127" id="YDe-Ud-wVu"/>
                             <constraint firstItem="1hH-yr-WTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="n74-kL-sbD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="maU-cU-wde" secondAttribute="trailing" constant="20" id="pYp-3W-IAB"/>
                             <constraint firstItem="74e-HH-ihA" firstAttribute="top" secondItem="maU-cU-wde" secondAttribute="top" id="qfK-ap-8Jd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1hH-yr-WTg" secondAttribute="bottom" constant="90" id="rP8-XN-fDz"/>
                             <constraint firstItem="ehw-HN-aI1" firstAttribute="top" secondItem="maU-cU-wde" secondAttribute="bottom" constant="17" id="unz-SK-IFd"/>
@@ -200,7 +201,7 @@
             <objects>
                 <glkViewController preferredFramesPerSecond="30" id="Ozj-ov-CEF" sceneMemberID="viewController">
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="nlJ-SI-n6k" customClass="SpectrumGLKView" customModule="StethIO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PGp-Xb-LUX"/>
                         <connections>
@@ -220,7 +221,7 @@
             <objects>
                 <glkViewController preferredFramesPerSecond="30" id="AYP-cx-8o8" userLabel="SpectrumGLKViewController" customClass="SpectrumGLKViewController" customModule="StethIO" sceneMemberID="viewController">
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="Zc0-7P-thz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="520"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="OHe-FE-57k"/>
                         <connections>
