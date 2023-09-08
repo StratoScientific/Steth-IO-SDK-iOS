@@ -23,6 +23,7 @@ class ActionToolBar: UIView{
     }
     func reset() {
         self.buttonStart.setTitle("start", for: .normal)
+        buttonStart.isActive = true
     }
 }
 

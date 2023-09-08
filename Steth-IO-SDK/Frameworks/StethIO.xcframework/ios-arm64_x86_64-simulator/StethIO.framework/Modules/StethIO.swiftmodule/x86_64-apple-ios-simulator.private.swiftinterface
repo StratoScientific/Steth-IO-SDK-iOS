@@ -397,7 +397,7 @@ extension StethIO.AES {
   convenience public init(key: Swift.String, iv: Swift.String, padding: StethIO.Padding = .pkcs7) throws
 }
 extension AVFAudio.AVAudioSession {
-  public static func setInputToBuiltInMicAndNoiseCancel(audioSessionPort: AVFAudio.AVAudioSession.Port = AVAudioSession.Port.builtInMic) throws
+  public func change(audioSessionPort: AVFAudio.AVAudioSession.Port) throws
 }
 final public class Checksum {
   @usableFromInline
@@ -2055,13 +2055,13 @@ public protocol StethIOManagerDelegate : AnyObject {
       get
     }
   }
-  public enum AudioSampleOutputType {
+  public enum AudioSampleOutputType : Swift.Int {
+    case none
     case rawSamples
     case processedSamples
-    case none
-    public static func == (a: StethIO.StethIOManager.AudioSampleOutputType, b: StethIO.StethIOManager.AudioSampleOutputType) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
       get
     }
   }
@@ -2080,7 +2080,6 @@ public protocol StethIOManagerDelegate : AnyObject {
   public var isReady: Swift.Bool {
     get
   }
-  public var audioSessionPort: AVFAudio.AVAudioSession.Port
   public func start() throws
   public func cancel()
   public func finish(clear: Swift.Bool = false)
@@ -2371,6 +2370,9 @@ extension StethIO.OFB.Error : Swift.Equatable {}
 extension StethIO.OFB.Error : Swift.Hashable {}
 extension StethIO.ChaCha20.Error : Swift.Equatable {}
 extension StethIO.ChaCha20.Error : Swift.Hashable {}
+extension StethIO.StethIOManager.ExamType : Swift.Equatable {}
+extension StethIO.StethIOManager.ExamType : Swift.Hashable {}
+extension StethIO.StethIOManager.ExamType : Swift.RawRepresentable {}
 extension StethIO.SHA3.Variant : Swift.Equatable {}
 extension StethIO.SHA3.Variant : Swift.Hashable {}
 extension StethIO.Environment : Swift.Equatable {}
@@ -2410,11 +2412,9 @@ extension StethIO.RSA.SignatureVariant : Swift.Equatable {}
 extension StethIO.RSA.SignatureVariant : Swift.Hashable {}
 extension StethIO.CBC.Error : Swift.Equatable {}
 extension StethIO.CBC.Error : Swift.Hashable {}
-extension StethIO.StethIOManager.ExamType : Swift.Equatable {}
-extension StethIO.StethIOManager.ExamType : Swift.Hashable {}
-extension StethIO.StethIOManager.ExamType : Swift.RawRepresentable {}
 extension StethIO.StethIOManager.AudioSampleOutputType : Swift.Equatable {}
 extension StethIO.StethIOManager.AudioSampleOutputType : Swift.Hashable {}
+extension StethIO.StethIOManager.AudioSampleOutputType : Swift.RawRepresentable {}
 extension StethIO.AES.Error : Swift.Equatable {}
 extension StethIO.AES.Error : Swift.Hashable {}
 extension StethIO.AES.Variant : Swift.Equatable {}

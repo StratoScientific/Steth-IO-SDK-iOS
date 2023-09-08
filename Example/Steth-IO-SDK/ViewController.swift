@@ -21,6 +21,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     @IBOutlet var debugSwitch: UISwitch!
 
     @IBOutlet var durationLabel: UILabel!
+    @IBOutlet var bpmabel: UILabel!
     @IBOutlet var graph: SpectrumGLKView!
 
     var graphViewController: SpectrumGLKViewController!
@@ -34,7 +35,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         manager.delegate = self
         manager.apiKey = API_KEY
         manager.examType = .heart //for heart
-        manager.sampleType = .rawSamples
+        manager.sampleType = .none
         manager.debug = true
         /// UI
         self.durationLabel.text = 0.formatSecondsToString()
@@ -42,10 +43,25 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: Button Action
     @IBAction func startButtonAction(_ sender: Any) {
         guard let button = sender as? UIButton else {
             return
         }
+//        do {
+//            try AVAudioSession.sharedInstance().change(audioSessionPort: .headsetMic)
+//        } catch {
+//            print(error)
+//            showAlert("Error", message: "unable to change port \(error.localizedDescription)")
+//            return
+//        }
+//
+//        if !manager.isHeadphonesConnected {
+//            showAlert("Error", message: "Please connect wired Steth IO Spot to continue the examination.")
+//            return
+//        }
+        
+        
         if manager.isRecording {
             manager.isPause = !manager.isPause
             button.setTitle( manager.isPause ? "Resume": "Pause", for: .normal)
@@ -83,11 +99,13 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     @IBAction func changeTypeAction(_ sender: UISegmentedControl) {
         manager.examType = StethIOManager.ExamType.`init`(rawValue: sender.selectedSegmentIndex)
     }
+    @IBAction func audoSampleAction(_ sender: UISegmentedControl) {
+        manager.sampleType = StethIOManager.AudioSampleOutputType.init(rawValue: sender.selectedSegmentIndex) ?? .none
+    }
     @IBAction func debugChange(_ sender: UISwitch) {
         manager.debug = sender.isOn
-        
     }
-    ///MARK:- Navigation
+    // MARK:  Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "GraphViewController"){
             graphViewController = segue.destination as? SpectrumGLKViewController
@@ -96,15 +114,15 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         }
     }
     
-    ///MARK:- StethIO Delegate
+    // MARK: StethIO Delegate
     func stethIOManagerReadyToStart() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-            self.actionToolBar.isActive(true)
+            self.actionToolBar.reset()
         }
     }
     
     func stethIOManagerDidStarted() {
-        
+        self.actionToolBar.isActive(true)
     }
     
     func stethIOManagerDidCancelled() {
@@ -120,12 +138,21 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     }
     func stethIOManagerDidFinished(url: URL?) {
         print("stethIOManagerDidFinished", url ?? "No audio")
+        if let url = url, let filename = url.pathComponents.last?.description, let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first{
+            let toURL = "\(documentsPath)/\(filename)"
+            try?    FileManager.default.moveItem(at: url, to: .init(fileURLWithPath: toURL))
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             self.actionToolBar.reset()
+            self.actionToolBar.isActive(false)
+            self.actionToolBar.buttonStart.isActive = true
         }
     }
     func stethIOManagerDidUpdateHeartBPM(_ bpm: Double) {
 //        print("stethIOManagerDidUpdateHeartBPM", bpm)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+            self.bpmabel.text = "\(bpm)"
+        }
     }
     
 }
@@ -138,5 +165,13 @@ extension StethIOManager.ExamType {
             return StethIOManager.ExamType.lungs
         }
         return StethIOManager.ExamType.vascular
+    }
+}
+
+extension ViewController{
+     func showAlert(_ title:String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
