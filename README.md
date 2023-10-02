@@ -113,6 +113,7 @@ present programatically  or embbed with storyboard
 |environment| Environment | | default `production`, change the environment `STAGING` or `PRODUCTION`|
 |isHeadphonesConnected| Boolean | | Headphones is Connected or not  `Boolean`|
 |debug| Boolean ||default value is `false`|
+|isActiveNoiseCancel| Boolean ||default value is `true`|
 |start| Function |✅|start the exam, when API key are valid and audio permission|
 |pause| Function | | pause  recording, if recording is running|
 |resume| Function | | resume  recording, if recording is pause|
