@@ -2069,6 +2069,10 @@ public protocol StethIOManagerDelegate : AnyObject {
     get
     set
   }
+  public var isActiveNoiseCancel: Swift.Bool {
+    get
+    set
+  }
   public var sampleType: StethIO.StethIOManager.AudioSampleOutputType
   public static var shared: StethIO.StethIOManager
   weak public var delegate: (any StethIO.StethIOManagerDelegate)?
