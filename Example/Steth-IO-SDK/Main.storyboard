@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="510"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <connections>
-                                            <segue destination="AYP-cx-8o8" kind="embed" identifier="GraphViewController" id="Xfv-FP-h5n"/>
+                                            <segue destination="AYP-cx-8o8" kind="embed" identifier="spectrumGLKViewController" id="Xfv-FP-h5n"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -123,24 +123,10 @@
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-HN-aI1">
-                                <rect key="frame" x="27" y="676" width="297" height="31"/>
+                                <rect key="frame" x="27" y="676" width="183" height="31"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-hp-2L4">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hx-d6-Wq9">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kda-yZ-RWu">
-                                                <rect key="frame" x="45" y="0.0" width="51" height="31"/>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fNq-Gn-dpZ">
-                                        <rect key="frame" x="114" y="0.0" width="105" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmq-hy-GWZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -150,11 +136,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBO-AS-O8Q">
                                                 <rect key="frame" x="56" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="debugChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rh9-CG-wym"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iYD-tF-wlV">
-                                        <rect key="frame" x="239" y="5.5" width="58" height="20.5"/>
+                                        <rect key="frame" x="125" y="5.5" width="58" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEP-ex-efX">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
@@ -178,16 +167,38 @@
                                     <segment title="None"/>
                                     <segment title="rawSamples"/>
                                     <segment title="Proccess"/>
+                                    <segment title="AutoGain"/>
                                 </segments>
                                 <connections>
                                     <action selector="audoSampleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Njf-gr-fku"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v57-Yo-2G0">
+                                <rect key="frame" x="312" y="45" width="82" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.circle.fill" catalog="system" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5j-eB-XKs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbi-19-JuB" customClass="ActionButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="331.5" y="671" width="62" height="22"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="New">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <imageReference key="image" image="plus.rectangle.on.rectangle" catalog="system" symbolScale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="newExam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBx-sl-iDj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V5f-mE-Z97" secondAttribute="trailing" constant="28" id="151-SQ-ZbJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v57-Yo-2G0" secondAttribute="trailing" constant="20" id="37s-Gx-faf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hH-yr-WTg" secondAttribute="trailing" constant="12" id="4ig-HM-5R8"/>
                             <constraint firstItem="maU-cU-wde" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="74e-HH-ihA" secondAttribute="trailing" constant="8" symbolic="YES" id="4pP-bf-4ij"/>
                             <constraint firstItem="74e-HH-ihA" firstAttribute="top" secondItem="bv1-Dt-Ror" secondAttribute="bottom" constant="30" id="92W-p9-WYW"/>
@@ -196,7 +207,10 @@
                             <constraint firstItem="74e-HH-ihA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="L29-nK-W6z"/>
                             <constraint firstItem="V5f-mE-Z97" firstAttribute="top" secondItem="ehw-HN-aI1" secondAttribute="bottom" constant="20" id="OvH-wF-eUq"/>
                             <constraint firstItem="bv1-Dt-Ror" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Q5Z-Zh-fE1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lbi-19-JuB" secondAttribute="trailing" constant="20.5" id="T33-B5-b9m"/>
+                            <constraint firstItem="lbi-19-JuB" firstAttribute="top" secondItem="maU-cU-wde" secondAttribute="bottom" constant="12" id="UCS-4f-2nC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="maU-cU-wde" secondAttribute="trailing" constant="20" id="YDe-Ud-wVu"/>
+                            <constraint firstItem="v57-Yo-2G0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="45" id="k8z-q1-dfW"/>
                             <constraint firstItem="V5f-mE-Z97" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="ksx-bI-4PP"/>
                             <constraint firstItem="1hH-yr-WTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="n74-kL-sbD"/>
                             <constraint firstItem="74e-HH-ihA" firstAttribute="top" secondItem="maU-cU-wde" secondAttribute="top" id="qfK-ap-8Jd"/>
@@ -208,9 +222,9 @@
                     <connections>
                         <outlet property="actionToolBar" destination="1hH-yr-WTg" id="hUx-x8-84n"/>
                         <outlet property="bpmabel" destination="c21-kp-A4D" id="vlM-Mo-pni"/>
-                        <outlet property="clearSwitch" destination="kda-yZ-RWu" id="2zO-u8-a1V"/>
                         <outlet property="debugSwitch" destination="bBO-AS-O8Q" id="z0z-DI-nKa"/>
                         <outlet property="durationLabel" destination="74e-HH-ihA" id="pCC-zE-jNh"/>
+                        <outlet property="playButton" destination="v57-Yo-2G0" id="aCw-yA-lYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -248,6 +262,9 @@
         <designable name="bSJ-OZ-kuY">
             <size key="intrinsicContentSize" width="69" height="22"/>
         </designable>
+        <designable name="lbi-19-JuB">
+            <size key="intrinsicContentSize" width="62" height="22"/>
+        </designable>
         <designable name="zSe-Ro-2rX">
             <size key="intrinsicContentSize" width="63" height="22"/>
         </designable>
@@ -255,6 +272,7 @@
     <resources>
         <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="123"/>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.rectangle.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="stop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

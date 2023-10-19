@@ -26,12 +26,16 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
 
 ### SDK Usage ✨
 1. In ViewController
-    ```swift
+```swift
     //Initializer
-    let stethManager = StethIOManager.shared
-    
-    //Enter your API key here
-    stethManager.apiKey = "YOUR_API_KEY"
+    StethIOBase.shared.apiKey =  "YOUR_API_KEY"
+    StethIOBase.shared.debug = true
+    StethIOBase.shared.onReady {
+    }
+```  
+2. Prepare for exam
+```swift         
+    let stethManager = StethIOManager()
     
     //Set delegate to receive bpm and saved samples url
     stethManager.delegate = self
@@ -41,9 +45,6 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     
     //set the sample type to none/processedSamples/rawSamples
     stethManager.sampleType = .none
-
-    // production or stagging
-    stethManager.environment = .production
     
     //This will start the recording
     try stethManager.start()
@@ -53,16 +54,12 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     
     // cancel session
     stethManager.cancel()
-    ```
+```
     
 ### StethIOManagerDelegate
 
 ```
     ///MARK:- StethIO Delegate
-    func stethIOManagerReadyToStart() {
-        SDK read to start the exam. your api key is valid
-    }
-    
     func stethIOManagerDidStarted() {
         // exam started
     }
@@ -72,6 +69,9 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     }
     func stethIOManagerDidUpdateDuration(_ seconds: TimeInterval) {
        // while taking the exam exation duration will be update
+    }
+    func stethIOManagerUpdateSpectrum(_ graph: OpaquePointer?, examType: StethIOManager.ExamType) {
+         spectrumView.update(graph: graph, examType: examType)
     }
     func stethIOManagerDidFinished(url: URL?) {
      // after finish the example, return the audio sample local file path
@@ -103,16 +103,21 @@ present programatically  or embbed with storyboard
 
 |Param |   Type    | Required   | Description  | 
 |:--- | :---:| :---:| :--- |
-|delegate| `StethIOManagerDelegate`|✅|callback events|
 |apiKey| String|✅|requied valid api key|
+|environment| Environment | | default `production`, change the environment `STAGING` or `PRODUCTION`|
+|debug| Boolean ||default value is `false`|
+
+
+StethIOManager
+
+|Param |   Type    | Required   | Description  | 
+|:--- | :---:| :---:| :--- |
+|delegate| `StethIOManagerDelegate`|✅|callback events|
 |examType| `ExamType` |✅|ExamType  `heart`,`lungs`, `vascular`|
-|sampleType| `AudioSampleOutputType` |✅|SampleType `NONE`, `RAW_AUDIO`, `PROCESSED_AUDIO`|
-|isReady| Boolean | | SDK is ready for exam|
+|sampleType| `AudioSampleOutputType` |✅|SampleType `none`, `rawSamples`, `processedSamples`, `autoGain`|
 |isPause| Boolean | | recording of pause status `Boolean`|
 |isRecording| Boolean | | recording is active or not `Boolean`|
-|environment| Environment | | default `production`, change the environment `STAGING` or `PRODUCTION`|
 |isHeadphonesConnected| Boolean | | Headphones is Connected or not  `Boolean`|
-|debug| Boolean ||default value is `false`|
 |isActiveNoiseCancel| Boolean ||default value is `true`|
 |start| Function |✅|start the exam, when API key are valid and audio permission|
 |pause| Function | | pause  recording, if recording is running|

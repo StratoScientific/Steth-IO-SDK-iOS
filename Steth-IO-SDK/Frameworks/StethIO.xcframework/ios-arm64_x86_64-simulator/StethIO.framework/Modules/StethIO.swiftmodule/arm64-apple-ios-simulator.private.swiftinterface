@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StethIO
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StethIO
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
@@ -1231,6 +1231,23 @@ public typealias BigInteger = StethIO.CS.BigInt
 public typealias BigUInteger = StethIO.CS.BigUInt
 public enum CS {
 }
+@_hasMissingDesignatedInitializers public class StethIOBase {
+  public static let shared: StethIO.StethIOBase
+  public var apiKey: Swift.String {
+    get
+    set
+  }
+  public var environment: StethIO.Environment
+  public var isReady: Swift.Bool {
+    get
+  }
+  public var debug: Swift.Bool {
+    get
+    set
+  }
+  public func onReady(_ callback: (() -> Swift.Void)?)
+  @objc deinit
+}
 extension StethIO.CS.BigUInt : Swift.Comparable {
   public static func compare(_ a: StethIO.CS.BigUInt, _ b: StethIO.CS.BigUInt) -> Foundation.ComparisonResult
   public static func == (a: StethIO.CS.BigUInt, b: StethIO.CS.BigUInt) -> Swift.Bool
@@ -1478,6 +1495,7 @@ public enum APIKeyErrors : Swift.Error {
 }
 public enum SDKSetup : Swift.Error {
   case errorAudioFilterModel
+  case alreadyRecordingInProgress
   public static func == (a: StethIO.SDKSetup, b: StethIO.SDKSetup) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -2037,14 +2055,14 @@ public struct CBC : StethIO.BlockMode {
   public func worker(blockSize: Swift.Int, cipherOperation: @escaping StethIO.CipherOperationOnBlock, encryptionOperation: @escaping StethIO.CipherOperationOnBlock) throws -> any StethIO.CipherModeWorker
 }
 public protocol StethIOManagerDelegate : AnyObject {
-  func stethIOManagerReadyToStart()
   func stethIOManagerDidStarted()
+  func stethIOManagerUpdateSpectrum(_ graph: Swift.OpaquePointer?, examType: StethIO.StethIOManager.ExamType)
   func stethIOManagerDidUpdateHeartBPM(_ bpm: Swift.Double)
   func stethIOManagerDidUpdateDuration(_ seconds: Foundation.TimeInterval)
   func stethIOManagerDidCancelled()
   func stethIOManagerDidFinished(url: Foundation.URL?)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StethIOManager : ObjectiveC.NSObject, AVFAudio.AVAudioPlayerDelegate, AVFAudio.AVAudioRecorderDelegate {
+@objc @_inheritsConvenienceInitializers public class StethIOManager : ObjectiveC.NSObject, AVFAudio.AVAudioPlayerDelegate, AVFAudio.AVAudioRecorderDelegate {
   public enum ExamType : Swift.String {
     case heart
     case lungs
@@ -2059,41 +2077,26 @@ public protocol StethIOManagerDelegate : AnyObject {
     case none
     case rawSamples
     case processedSamples
+    case autoGain
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
-  public var examType: StethIO.StethIOManager.ExamType {
-    get
-    set
-  }
   public var isActiveNoiseCancel: Swift.Bool {
     get
     set
   }
   public var sampleType: StethIO.StethIOManager.AudioSampleOutputType
-  public static var shared: StethIO.StethIOManager
   weak public var delegate: (any StethIO.StethIOManagerDelegate)?
-  public var apiKey: Swift.String {
-    get
-    set
-  }
-  public var environment: StethIO.Environment
-  public var isReady: Swift.Bool {
-    get
-  }
-  public func start() throws
+  @objc override dynamic public init()
+  public func start(examType: StethIO.StethIOManager.ExamType = .heart) throws
   public func cancel()
-  public func finish(clear: Swift.Bool = false)
+  public func finish()
   @objc deinit
 }
 extension StethIO.StethIOManager {
-  public var debug: Swift.Bool {
-    get
-    set
-  }
   public var isRecording: Swift.Bool {
     get
   }
@@ -2119,6 +2122,7 @@ public struct SpectrumWindowWidthSeconds {
   @_Concurrency.MainActor(unsafe) public var spectrumWindowWidthSeconds: StethIO.SpectrumWindowWidthSeconds
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) public func update(graph: Swift.OpaquePointer?, examType: StethIO.StethIOManager.ExamType?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @objc deinit
 }
