@@ -12,8 +12,10 @@
 		E0BF6C4224E269AE00CA31F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BF6C3924E269AE00CA31F8 /* Main.storyboard */; };
 		E0BF6C4324E269AE00CA31F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BF6C3A24E269AE00CA31F8 /* LaunchScreen.storyboard */; };
 		E0BF6C4624E269AE00CA31F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0BF6C3E24E269AE00CA31F8 /* Assets.xcassets */; };
-		E0BF6C4824E269AE00CA31F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF6C4024E269AE00CA31F8 /* ViewController.swift */; };
 		E0BF6C4924E269AE00CA31F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF6C4124E269AE00CA31F8 /* AppDelegate.swift */; };
+		FA82FE9A2AE3A83D00742613 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82FE972AE3A83D00742613 /* ExamViewController.swift */; };
+		FA82FE9B2AE3A83D00742613 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82FE982AE3A83D00742613 /* CardView.swift */; };
+		FA82FE9C2AE3A83D00742613 /* PrepareExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82FE992AE3A83D00742613 /* PrepareExamViewController.swift */; };
 		FAA29F0D2A93D1F7006C7F41 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA29F0B2A93D1F7006C7F41 /* ActionButton.swift */; };
 		FAA29F0E2A93D1F7006C7F41 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA29F0C2A93D1F7006C7F41 /* TimeInterval+Utils.swift */; };
 /* End PBXBuildFile section */
@@ -45,10 +47,12 @@
 		E0BF6C3924E269AE00CA31F8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E0BF6C3A24E269AE00CA31F8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0BF6C3E24E269AE00CA31F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E0BF6C4024E269AE00CA31F8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0BF6C4124E269AE00CA31F8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0BF6C4D24E26AE500CA31F8 /* StethIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StethIO.framework; path = "../Steth-IO-SDK/Frameworks/StethIO.framework"; sourceTree = "<group>"; };
 		E229AE8CB6416F72A1D81DA7 /* Pods_Steth_IO_SDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steth_IO_SDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA82FE972AE3A83D00742613 /* ExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		FA82FE982AE3A83D00742613 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FA82FE992AE3A83D00742613 /* PrepareExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareExamViewController.swift; sourceTree = "<group>"; };
 		FAA29F0B2A93D1F7006C7F41 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		FAA29F0C2A93D1F7006C7F41 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +97,10 @@
 				E0BF6C3E24E269AE00CA31F8 /* Assets.xcassets */,
 				E0BF6C3A24E269AE00CA31F8 /* LaunchScreen.storyboard */,
 				E0BF6C3924E269AE00CA31F8 /* Main.storyboard */,
-				E0BF6C4024E269AE00CA31F8 /* ViewController.swift */,
 				FAA29F0B2A93D1F7006C7F41 /* ActionButton.swift */,
+				FA82FE982AE3A83D00742613 /* CardView.swift */,
+				FA82FE972AE3A83D00742613 /* ExamViewController.swift */,
+				FA82FE992AE3A83D00742613 /* PrepareExamViewController.swift */,
 				FAA29F0C2A93D1F7006C7F41 /* TimeInterval+Utils.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				E0BF6C3824E269AD00CA31F8 /* Steth-IO-SDK_Example-Bridging-Header.h */,
@@ -275,10 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0BF6C4824E269AE00CA31F8 /* ViewController.swift in Sources */,
 				E0BF6C4924E269AE00CA31F8 /* AppDelegate.swift in Sources */,
+				FA82FE9A2AE3A83D00742613 /* ExamViewController.swift in Sources */,
 				FAA29F0D2A93D1F7006C7F41 /* ActionButton.swift in Sources */,
 				FAA29F0E2A93D1F7006C7F41 /* TimeInterval+Utils.swift in Sources */,
+				FA82FE9B2AE3A83D00742613 /* CardView.swift in Sources */,
+				FA82FE9C2AE3A83D00742613 /* PrepareExamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

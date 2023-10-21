@@ -47,7 +47,7 @@ pod 'Steth-IO-SDK', :git => 'https://github.com/StratoScientific/Steth-IO-SDK-iO
     stethManager.sampleType = .none
     
     //This will start the recording
-    try stethManager.start()
+    try stethManager.start(StethIOExamOption())
     
     //This will stop the recording
     stethManager.finish()
@@ -113,8 +113,6 @@ StethIOManager
 |Param |   Type    | Required   | Description  | 
 |:--- | :---:| :---:| :--- |
 |delegate| `StethIOManagerDelegate`|✅|callback events|
-|examType| `ExamType` |✅|ExamType  `heart`,`lungs`, `vascular`|
-|sampleType| `AudioSampleOutputType` |✅|SampleType `none`, `rawSamples`, `processedSamples`, `autoGain`|
 |isPause| Boolean | | recording of pause status `Boolean`|
 |isRecording| Boolean | | recording is active or not `Boolean`|
 |isHeadphonesConnected| Boolean | | Headphones is Connected or not  `Boolean`|
@@ -124,6 +122,18 @@ StethIOManager
 |resume| Function | | resume  recording, if recording is pause|
 |cancel| Function | | cancel  recording, if recording is running|
 |finish| Function | | finish  recording, if recording is running|
+
+Exam Properties `StethIOExamOption`
+
+|Param |   Type    | Required  | Default  | Description  | 
+|:--- | :---:| :---:| :---:| :--- |
+|examType| `ExamType` |✅| `heart` | ExamType  `heart`,`lungs`, `vascular`|
+|sampleType| `AudioSampleOutputType` |✅| `rawSamples` | SampleType `none`, `rawSamples`, `processedSamples`, `autoGain`|
+|heartMinimumGain| `Float` |✅| `heart` | Automatic heart gain will never drop below this setting values of 2 to 10 are probably best|
+|lungTargetLevel| `Float` |✅| `0.1` | This sets the target average level for the automatic lung gain. levels between 0.1 and 1.0 are probably best|
+|heartTargetLevel| `Float` |✅| `2.0` | This is the target peak level for the automatic heart gain, prior to limiting. A level greater than 1.0 is no problem, although by 4.0 the distortion might be audible. This can be set from 0.5 to 4.0, settings from 1.0 to 3.0 are probably best|
+
+
 
 
 ## Important ⚠️

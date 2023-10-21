@@ -1582,6 +1582,9 @@ final internal class StreamEncryptor : StethIO.Cryptor, StethIO.Updatable {
   @objc @usableFromInline
   deinit
 }
+public struct StethIOExamOption {
+  public init(examType: StethIO.StethIOManager.ExamType = .heart, audioSampleType: StethIO.StethIOManager.AudioSampleOutputType = .rawSamples, heartMinimumGain: Swift.Float = 2.0, lungTargetLevel: Swift.Float = 0.1, heartTargetLevel: Swift.Float = 2.0)
+}
 extension Swift.String {
   @inlinable public var bytes: Swift.Array<Swift.UInt8> {
     get {
@@ -2091,7 +2094,7 @@ public protocol StethIOManagerDelegate : AnyObject {
   public var sampleType: StethIO.StethIOManager.AudioSampleOutputType
   weak public var delegate: (any StethIO.StethIOManagerDelegate)?
   @objc override dynamic public init()
-  public func start(examType: StethIO.StethIOManager.ExamType = .heart) throws
+  public func start(examOptions: StethIO.StethIOExamOption = .init()) throws
   public func cancel()
   public func finish()
   @objc deinit
@@ -2117,9 +2120,10 @@ extension StethIO.StethIOManager {
 public struct SpectrumWindowWidthSeconds {
   public init(hearts: Swift.Double, lungs: Swift.Double)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class SpectrumGLKView : GLKit.GLKView {
+@objc @_Concurrency.MainActor(unsafe) open class SpectrumGLKView : GLKit.GLKView {
   @_Concurrency.MainActor(unsafe) public var verticleZoom: Swift.Float
   @_Concurrency.MainActor(unsafe) public var spectrumWindowWidthSeconds: StethIO.SpectrumWindowWidthSeconds
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
   @_Concurrency.MainActor(unsafe) public func update(graph: Swift.OpaquePointer?, examType: StethIO.StethIOManager.ExamType?)

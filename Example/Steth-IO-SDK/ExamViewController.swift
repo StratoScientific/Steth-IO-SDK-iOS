@@ -14,11 +14,10 @@ import AVKit
 let API_KEY = "+b8i2KirhtItVb//IvrzXw1d5HWZ/23CFfXhfIczPfE=";
 //let API_KEY = "+YqThBGUgSWvsCc/8np7N85NyrXHWWZbyQF3ojGHfHhbbFLLs/mSv/t75cDHOcOO";
 
-class ViewController: UIViewController, StethIOManagerDelegate {
+class ExamViewController: UIViewController, StethIOManagerDelegate {
     
     
     @IBOutlet var actionToolBar: ActionToolBar!
-    @IBOutlet var debugSwitch: UISwitch!
     
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var bpmabel: UILabel!
@@ -26,7 +25,8 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     
     let manager = StethIOManager()
     
-    var examType =  StethIOManager.ExamType.heart;
+    var examOption: StethIOExamOption!
+    
     
     var audioURL: URL?{
         didSet{
@@ -55,12 +55,11 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         audioURL = nil
         // Do any additional setup after loading the view.
     }
-    @IBAction func newExam(_ sender: UIButton) {
-        if  let control = self.storyboard?.instantiateViewController(withIdentifier: "ViewController"){
-            self.present(control, animated: true)
-        }
-        
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        manager.cancel()
     }
+  
     // MARK: Button Action
     @IBAction func startButtonAction(_ sender: Any) {
         guard let button = sender as? UIButton else {
@@ -74,7 +73,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
         button.setTitle("Pause", for: .normal)
         do {
             audioURL = nil
-            try manager.start(examType: examType)
+            try manager.start(examOptions:  examOption)
         }
         catch {
             showAlert("Start Error", message: error.localizedDescription)
@@ -90,7 +89,7 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     @IBAction func restartAction(_ sender: UIButton) {
         manager.cancel()
         do {
-            try manager.start()
+            try manager.start(examOptions: examOption)
         }
         catch {
             showAlert("Re-Start Error", message: error.localizedDescription)
@@ -99,12 +98,12 @@ class ViewController: UIViewController, StethIOManagerDelegate {
     @IBAction func cancelButtonAction(_ sender: UIButton) {
         manager.cancel()
     }
-    @IBAction func changeTypeAction(_ sender: UISegmentedControl) {
-        examType = StethIOManager.ExamType.`init`(rawValue: sender.selectedSegmentIndex)
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        manager.cancel()
+        self.dismiss(animated: true)
     }
-    @IBAction func audoSampleAction(_ sender: UISegmentedControl) {
-        manager.sampleType = StethIOManager.AudioSampleOutputType.init(rawValue: sender.selectedSegmentIndex) ?? .none
-    }
+
+   
     @IBAction func debugChange(_ sender: UISwitch) {
         StethIOBase.shared.debug = sender.isOn
     }
@@ -179,7 +178,7 @@ extension StethIOManager.ExamType {
     }
 }
 
-extension ViewController{
+extension ExamViewController{
     func showAlert(_ title:String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
